@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Romulus et Remus</title>
+  <link rel="icon" type="image/png" href="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #000 url('img/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+  header {
+    height: 100vh;
+    /* Удаляем фон из header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1s;
+  }    
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.7;
+      margin-top: 1rem;
+    }
+    section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeInUp 1s;
+    }
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+    }
+    .quote {
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 3rem 0;
+      font-weight: 300;
+      opacity: 0.8;
+      font-style: italic;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .product-card {
+      background: #111;
+      border-radius: 16px;
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s;
+    }
+    .product-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+    }
+    .product-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      background: #222;
+      display: block;
+    }
+    .product-info {
+      padding: 1rem;
+    }
+    .product-info h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    .about {
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      opacity: 0.85;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      text-align: center;
+      background: #111;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      background: #222;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      resize: none;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #777;
+    }
+    button {
+      padding: 1rem 2rem;
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background: #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.5;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #ccc;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 700px) {
+      header {
+        height: auto;
+        padding: 3rem 1rem 2rem 1rem;
+      }
+      .product-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      section {
+        padding: 2.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Romulus et Remus</h1>
+  <p>Not clothes. An attitude.</p>
+</header>
+
+<section>
+  <div class="section-title">Коллекция</div>
+    <div class="product-grid">
+      <a href="acne.html" class="product-card" style="text-decoration:none; color:inherit;">
+        <img src="img/tshirt1.png" alt="Acne Studios T-Shirt" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x320?text=Нет+фото';">
+        <div class="product-info">
+          <h3>Acne Studios T-Shirt</h3>
+          <p>100% хлопок. Оверсайз.</p>
+          <p>1800₽</p>
+        </div>
+      </a>
+      <a href="hphealth.html" class="product-card" style="text-decoration:none; color:inherit;">
+        <img src="img/tshirt2.png" alt="HP Health T-Shirt" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x320?text=Нет+фото';">
+        <div class="product-info">
+          <h3>HP Health T-Shirt</h3>
+          <p>Кулинарная гладь. 200гр.</p>
+          <p>1200₽</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="quote">"Мы не магазин. Мы — твой лук на завтра."</div>
+</section>
+
+<section>
+  <div class="section-title">О нас</div>
+  <div class="about">
+    Мы продаём реплики, но не подделки.<br>
+    Это — стиль. Это — вызов. Это — улица, где ты либо выглядишь, либо слился.<br>
+    Romulus et Remus — для тех, кто выбирает себя, а не бренды.
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Связь</div>
+  <form id="contactForm">
+    <input type="text" placeholder="Твой ник в Telegram" required />
+    <textarea rows="4" placeholder="Что хочешь узнать?"></textarea>
+    <button type="submit">Отправить</button>
+    <div id="formMessage" style="color:#0f0; margin-top:1rem; display:none;">Спасибо! Мы свяжемся с вами.</div>
+  </form>
+</section>
+
+<footer>
+  © 2025 Romulus et Remus — <a href="https://t.me/+tGJ2hyjQTrE1NTIy" target="_blank" style="font-style: italic;">Romul</a>
+</footer>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const tgName = this.querySelector('input').value.trim();
+    const message = this.querySelector('textarea').value.trim();
+    const text = `Новая заявка с сайта:\nTelegram: ${tgName}\nВопрос: ${message}`;
+
+    fetch(`https://api.telegram.org/bot7936936135:AAENnQtZ_u4C88PEHMYri5aNIyUqVXXKnEA/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: 821740830,
+        text: text
+      })
+    })
+    .then(res => {
+      document.getElementById('formMessage').style.display = 'block';
+      this.reset();
+      setTimeout(() => {
+        document.getElementById('formMessage').style.display = 'none';
+      }, 4000);
+    })
+    .catch(() => {
+      alert('Ошибка отправки. Попробуйте позже.');
+    });
+  });
+</script>
+
+</body>
+</html>
