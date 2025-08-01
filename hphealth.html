@@ -51,12 +51,18 @@
       color: #ccc;
     }
     .price {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: #fff;
-    text-shadow: 0 2px 8px #000a;
-    letter-spacing: 1px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #fff;
+      text-shadow: 0 2px 8px #000a;
+      letter-spacing: 1px;
+    }
+    .btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
     .back-btn {
       display: inline-block;
@@ -75,14 +81,51 @@
     .back-btn:hover {
       background: linear-gradient(90deg, #414345 0%, #232526 100%);
     }
+    .order-btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.3s;
+      margin-top: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .order-btn:hover {
+      background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+    }
+    @media (max-width: 700px) {
+      .container {
+        padding: 1rem 0.5rem;
+        margin: 1.5rem 0.2rem;
+      }
+      .gallery img {
+        width: 100px;
+        height: 110px;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      .desc {
+        font-size: 0.95rem;
+      }
+      .btns {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="gallery">
       <img src="img/tshirt2.png" alt="HP Health T-Shirt" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x220?text=Нет+фото';">
-      <img src="img/hp/2025-07-12 20.17.11.jpg" alt="HP Health T-Shirt 2" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x220?text=Нет+фото';">
-      <img src="img/hp/2025-07-12 20.17.34.jpg" alt="HP Health T-Shirt 3" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x220?text=Нет+фото';">
+      <img src="img/hp/tshirt2_2.jpg" alt="HP Health T-Shirt 2" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x220?text=Нет+фото';">
+      <img src="img/hp/tshirt2_3.jpg" alt="HP Health T-Shirt 3" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x220?text=Нет+фото';">
     </div>
     <h1>HP Health T-Shirt</h1>
     <div class="desc">
@@ -93,11 +136,10 @@
       <b>Размеры:</b> S, M, L, XL
     </div>
     <div class="price">1200₽</div>
-            <!-- Внутри .container, после блока с ценой -->
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="https://t.me/romul_manager?text=Привет хочу заказать футболку HP Health HP" class="back-btn" target="_blank">Заказать</a>
-            <a href="index.html" class="back-btn">← Назад к коллекции</a>
-        </div>
+    <div class="btns">
+      <a href="https://t.me/romul_manager?text=Привет хочу заказать HP Health T-Shirt" class="order-btn" target="_blank">Заказать</a>
+      <a href="index.html" class="back-btn">← Назад к коллекции</a>
+    </div>
   </div>
 </body>
 </html>
